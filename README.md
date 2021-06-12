@@ -1,0 +1,2 @@
+# LINE-SecondaryQR
+SIMPLE GENERATE QR
