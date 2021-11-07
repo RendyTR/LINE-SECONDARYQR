@@ -12,6 +12,7 @@ headers   = {
     "sysName": "IMJUSTGOOD",
     "cert": None,
 }
+
 main      = json.loads(requests.get(host, headers=headers).text)
 qrlink    = main["result"]["qr"]
 print(qrlink)
