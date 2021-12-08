@@ -15,7 +15,9 @@ headers   = {
 
 main      = json.loads(requests.get(host, headers=headers).text)
 qrlink    = main["result"]["qr"]
+barcode   = main["result"]["barcode"]
 print(qrlink)
+print(barcode)
 
 callback  = main["result"]["callback"]["pin"]
 data      = json.loads(requests.get(callback, headers=headers).text)
