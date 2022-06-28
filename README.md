@@ -1,5 +1,5 @@
 ## BOT UNOFFICIAL
-SIMPLE GENERATE SECONDARY TOKEN BY IMJUSTGOOD API
+GENERATE LINE SECONDARY TOKEN BY IMJUSTGOOD API
 
 ```python
 import json, requests
@@ -8,7 +8,7 @@ host      = "https://api.imjustgood.com/lineqr"
 headers   = {
     "User-Agent": "Justgood/5.0"
     "apikey": "YOUR APIKEY HERE",
-    "appName": "CHROMEOS\t2.4.7\tChromeOS\t96",
+    "appName": "CHROMEOS\t2.5.3\tChromeOS\t102",
     "sysName": "IMJUSTGOOD",
     "cert": None,
 }
@@ -32,5 +32,3 @@ authtoken = data["result"]["token"]
 print(certified)
 print(authtoken)
 ```
-
-Join our forum for more information <a href="https://api.imjustgood.com/custom/forum">here</a>
