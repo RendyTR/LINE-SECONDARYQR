@@ -4,13 +4,19 @@ GENERATE LINE SECONDARY TOKEN BY IMJUSTGOOD API
 ```python
 import json, requests
 
+apikey    = "INPUT_YOUR_APIKEY"
 host      = "https://api.imjustgood.com/lineqr"
+agents    = "Mozilla/5.0 (X11; Linux x86_64) Chrome/51.0.2704.106"
+appname   = "DESKTOPMAC\t7.13.2\tMac\t10"
+sysname   = "IMJUSTGOOD"
+cert      = None
+
 headers   = {
-    "User-Agent": "Justgood/5.0"
-    "apikey": "YOUR APIKEY HERE",
-    "appName": "CHROMEOS\t2.5.3\tChromeOS\t102",
-    "sysName": "IMJUSTGOOD",
-    "cert": None,
+    "User-Agent": agents,
+    "apikey": apikey,
+    "appName": appname,
+    "sysName": sysname,
+    "cert": cert,
 }
 
 main      = json.loads(requests.get(host, headers=headers).text)
