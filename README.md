@@ -7,7 +7,7 @@ import json, requests
 apikey    = "INPUT_YOUR_APIKEY"
 host      = "https://api.imjustgood.com/lineqr"
 agents    = "Mozilla/5.0 (X11; Linux x86_64) Chrome/51.0.2704.106"
-appname   = "DESKTOPMAC\t7.13.2\tMac\t10"
+appname   = "DESKTOPWIN\t7.13.2\tWindows\t10.0"
 sysname   = "IMJUSTGOOD"
 cert      = None
 
@@ -22,8 +22,7 @@ headers   = {
 main      = json.loads(requests.get(host, headers=headers).text)
 qrlink    = main["result"]["qr"]
 barcode   = main["result"]["barcode"]
-print(qrlink)
-print(barcode)
+print(qrlink, barcode)
 
 callback  = main["result"]["callback"]["pin"]
 data      = json.loads(requests.get(callback, headers=headers).text)
@@ -35,6 +34,5 @@ callback  = main["result"]["callback"]["token"]
 data      = json.loads(requests.get(callback, headers=headers).text)
 certified = data["result"]["cert"]
 authtoken = data["result"]["token"]
-print(certified)
-print(authtoken)
+print(certified, authtoken)
 ```
